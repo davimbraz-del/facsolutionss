@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T00:00:00Z",
+  "title": "Design System: Fac Solution",
+  "extensions": {
+    "colorMeta": {
+      "asfalto": { "role": "neutral", "displayName": "Asfalto", "canonical": "#0B0B0D", "tonalRamp": ["#050506", "#0B0B0D", "#141417", "#1C1C21", "#2C2C33", "#5A5A61", "#8E8E94", "#B5B5B5"] },
+      "laranja-cartaz": { "role": "primary", "displayName": "Laranja-cartaz", "canonical": "#FF5A1F", "tonalRamp": ["#3D1405", "#6B230A", "#A3360F", "#D94A17", "#FF5A1F", "#FF7E50", "#FFA684", "#FFD3C2"] },
+      "vermelho-sinal": { "role": "secondary", "displayName": "Vermelho-sinal", "canonical": "#E3262E", "tonalRamp": ["#36090B", "#5E1014", "#93181F", "#C21F27", "#E3262E", "#EC5A60", "#F38F93", "#FAC7C9"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Título do hero." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos de seção em caixa alta com palavra-chave laranja." },
+      "label": { "displayName": "Label", "purpose": "Rótulos de espaço reservado e avisos." }
+    },
+    "shadows": [
+      { "name": "botao", "value": "0 10px 24px -12px rgba(0,0,0,.85), 0 2px 6px rgba(0,0,0,.3)", "purpose": "Botões primários." },
+      { "name": "objeto", "value": "0 30px 50px -30px rgba(0,0,0,.95)", "purpose": "Celulares e chassi do outdoor." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(.16,1,.3,1)", "purpose": "Entradas no scroll, hover e acordeão." },
+      { "name": "press", "value": "100ms", "purpose": "Feedback de toque (:active)." },
+      { "name": "lamp-on", "value": "1.7s, tremulação em 40% do tempo", "purpose": "Refletores do outdoor acendendo." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "980px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação principal (WhatsApp / diagnóstico).",
+      "html": "<button class=\"ds-btn-primary\">Quero meu diagnóstico gratuito</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 26px;border:0;border-radius:6px;background:#FF5A1F;color:#0B0B0D;font:800 1rem/1.15 Manrope,system-ui,sans-serif;box-shadow:0 10px 24px -12px rgba(0,0,0,.85),0 2px 6px rgba(0,0,0,.3);transition:transform .25s cubic-bezier(.16,1,.3,1),background-color .2s}.ds-btn-primary:hover{background:#FF6B35;transform:translateY(-2px)}.ds-btn-primary:focus-visible{outline:2px solid #FF5A1F;outline-offset:3px}.ds-btn-primary:active{transform:scale(.97)}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Botão do header.",
+      "html": "<button class=\"ds-btn-line\">Falar no WhatsApp</button>",
+      "css": ".ds-btn-line{min-height:48px;padding:0 16px;border:1px solid rgba(255,90,31,.4);border-radius:6px;background:rgba(255,90,31,.08);color:#fff;font:700 .9375rem Manrope,system-ui,sans-serif}.ds-btn-line:hover{background:#FF5A1F;color:#0B0B0D}.ds-btn-line:focus-visible{outline:2px solid #FF5A1F;outline-offset:3px}"
+    },
+    {
+      "name": "Espaço reservado",
+      "kind": "custom",
+      "refersTo": "placeholder",
+      "description": "Caixa para dado real ainda não enviado.",
+      "html": "<div class=\"ds-ph\"><span>PRINT DE RESULTADO</span></div>",
+      "css": ".ds-ph{position:relative;display:flex;align-items:center;justify-content:center;min-height:120px;padding:16px;border:1px dashed rgba(255,90,31,.4);border-radius:6px;background:rgba(255,255,255,.03);color:#8E8E94;font:700 .6875rem Manrope,system-ui,sans-serif;letter-spacing:.16em}"
+    },
+    {
+      "name": "Card de dor",
+      "kind": "card",
+      "refersTo": "pain-card",
+      "description": "Card de sintoma com linha laranja curta no topo.",
+      "html": "<div class=\"ds-pain\">Você tem um ótimo serviço, mas ninguém vê</div>",
+      "css": ".ds-pain{position:relative;padding:22px 20px;background:#141417;border:1px solid rgba(255,255,255,.09);border-radius:6px;color:#fff;font:700 1.0625rem/1.4 Manrope,system-ui,sans-serif}.ds-pain::before{content:'';position:absolute;left:-1px;top:-1px;width:44px;height:1px;background:#FF5A1F}.ds-pain:hover{border-color:rgba(255,90,31,.4)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "O outdoor aceso na rua escura",
+    "overview": "A página é a rua à noite e o produto é o cartaz iluminado. Laranja como tinta de cartaz e de ação sobre asfalto e grafite.",
+    "keyCharacteristics": ["Tema único escuro", "Anton em caixa alta + Manrope", "Linhas finas laranja como estrutura", "Espaços reservados como arte-final"],
+    "rules": [
+      { "name": "A regra do cartaz", "body": "Laranja em área cheia só no outdoor e no bloco de nicho.", "section": "colors" },
+      { "name": "A regra do acento alto", "body": "Anton acentuado pede entrelinha ≥ 1.02.", "section": "typography" }
+    ],
+    "dos": ["Alimentar dados pelo objeto DADOS", "Proteger hover com (hover: hover) and (pointer: fine)"],
+    "donts": ["Eyebrow acima de títulos", "Sombra colorida brilhante em botões", "Números ou depoimentos inventados"]
+  }
+}
